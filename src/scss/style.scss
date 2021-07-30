@@ -1,3 +1,98 @@
+@use "abstracts/colors";
+@use "abstracts/fonts";
+@use "abstracts/dimensions" as d;
+@use "abstracts/mixins";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 16px;
+}
 body {
-    background-color: green;
+    font-family: fonts.$Montserrat;
+}
+a, a:hover, a:focus, a:link, a:visited, a:active {
+    text-decoration: none;
+}
+
+.top-navbar {
+    color: colors.$headersFontColor;
+    background-color: colors.$secondaryColor;
+    position: absolute;
+    width: 100%;
+    z-index: 4;
+    .container {
+        width: 1100px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        .main-logo-container {
+            align-self: center;
+        }
+        .nav-list {
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            list-style-type: none;
+            display: flex;
+            li {
+                display: block;
+                padding: 2.2rem 0;
+                a {
+                    color: colors.$headersFontColor;
+                    padding: calc(2.2rem - #{d.$navBarLinkUnderline}) 8px;
+                    &:hover {
+                        border-bottom: d.$navBarLinkUnderline solid colors.$mainColor;
+                        transition: .3s;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.slider-wrapper {
+    height: 100vh;
+    .slider-item {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    .slider-item1 {
+        background-image: url(/src/img/Header/hero-image-01.jpg);
+        @include mixins.flex-center();
+    }
+    .slider-item2 {
+        background-image: url(/src/img/Header/hero-image-02.jpg);
+        filter: brightness(20%);
+    }
+    .slider-item3 {
+        background-image: url(/src/img/Header/hero-image-03.jpg);
+        filter: brightness(40%);
+    }
+    .slider-btn-disabled {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        border: 2px solid colors.$mainColor;
+        margin: 0 5px 18px 5px;
+        transition: filter .2s linear;
+        &:hover {
+            filter: opacity(70%);
+        }
+    }
+    .slider-btn-active {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        margin: 0 5px 18px 5px;
+        background-color: colors.$mainColor;
+        transition: filter .2s linear;
+        &:hover {
+            filter: opacity(70%);
+        }
+    }
 }
