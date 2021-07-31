@@ -20,3 +20,11 @@
     display: flex;
     justify-content: center;
 }  
+
+
+
+@mixin bg-image-center {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}

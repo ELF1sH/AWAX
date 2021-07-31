@@ -1,0 +1,22 @@
+@use "colors";
+@use "fonts";
+
+@mixin mainBtn() {
+    color: colors.$headersFontColor;
+    text-transform: uppercase;
+    font-family: fonts.$Montserrat;
+    font-weight: 600;
+    font-size: 13px;
+
+    background-color: colors.$mainColor;
+    border: none;
+    padding: 12px 32px;
+    border-radius: 20px;
+
+    transition: background .5s ease;
+
+    cursor: pointer;
+    &:hover {
+        background-color: colors.$mainColorHover;
+    }
+}

@@ -2,6 +2,7 @@
 @use "abstracts/fonts";
 @use "abstracts/dimensions" as d;
 @use "abstracts/mixins";
+@use "abstracts/components";
 
 * {
     margin: 0;
@@ -51,27 +52,68 @@ a, a:hover, a:focus, a:link, a:visited, a:active {
                 }
             }
         }
+        .icon-nav-bar-container {
+            display: none;
+        }
     }
 }
 
 .slider-wrapper {
     height: 100vh;
     .slider-item {
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
+        text-transform: uppercase;
+        @include mixins.bg-image-center();
+        @include mixins.flex-center();
+        .dark-bg {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: #000;
+            opacity: 0.8;
+        }
+        .content {
+            z-index: 2;
+            .content-header {
+                font-size: 4.4rem;
+                color: colors.$headersFontColor;
+                line-height: 4.1rem;
+            }
+            .primary-word {
+                margin-bottom: 3rem;
+                text-align: center;
+                color: colors.$mainColor;
+            }
+            .phone-number {
+                color: colors.$headersFontColor;
+                font-size: 1.8rem;
+                text-align: center;
+                font-weight: 500;
+                margin-bottom: 3rem;
+                .phone-hover {
+                    cursor: pointer;
+                    transition: color .5s ease;
+                    &:hover {
+                        color: colors.$mainColor;
+                    }
+                }
+            }
+            .header-button {
+                @include components.mainBtn();
+                display: block;
+                margin: 0 auto;
+            }
+        }
     }
     .slider-item1 {
         background-image: url(/src/img/Header/hero-image-01.jpg);
-        @include mixins.flex-center();
     }
     .slider-item2 {
         background-image: url(/src/img/Header/hero-image-02.jpg);
-        filter: brightness(20%);
     }
     .slider-item3 {
         background-image: url(/src/img/Header/hero-image-03.jpg);
-        filter: brightness(40%);
     }
     .slider-btn-disabled {
         width: 15px;

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -52,28 +52,84 @@ a, a:hover, a:focus, a:link, a:visited, a:active {
   border-bottom: 7px solid #B88B58;
   transition: 0.3s;
 }
+.top-navbar .container .icon-nav-bar-container {
+  display: none;
+}
 
 .slider-wrapper {
   height: 100vh;
 }
 .slider-wrapper .slider-item {
+  text-transform: uppercase;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-}
-.slider-wrapper .slider-item1 {
-  background-image: url(/src/img/Header/hero-image-01.jpg);
   display: flex;
   align-items: center;
   justify-content: center;
 }
+.slider-wrapper .slider-item .dark-bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  opacity: 0.8;
+}
+.slider-wrapper .slider-item .content {
+  z-index: 2;
+}
+.slider-wrapper .slider-item .content .content-header {
+  font-size: 4.4rem;
+  color: #FFF;
+  line-height: 4.1rem;
+}
+.slider-wrapper .slider-item .content .primary-word {
+  margin-bottom: 3rem;
+  text-align: center;
+  color: #B88B58;
+}
+.slider-wrapper .slider-item .content .phone-number {
+  color: #FFF;
+  font-size: 1.8rem;
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 3rem;
+}
+.slider-wrapper .slider-item .content .phone-number .phone-hover {
+  cursor: pointer;
+  transition: color 0.5s ease;
+}
+.slider-wrapper .slider-item .content .phone-number .phone-hover:hover {
+  color: #B88B58;
+}
+.slider-wrapper .slider-item .content .header-button {
+  color: #FFF;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  background-color: #B88B58;
+  border: none;
+  padding: 12px 32px;
+  border-radius: 20px;
+  transition: background 0.5s ease;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+}
+.slider-wrapper .slider-item .content .header-button:hover {
+  background-color: #8E6B44;
+}
+.slider-wrapper .slider-item1 {
+  background-image: url(/src/img/Header/hero-image-01.jpg);
+}
 .slider-wrapper .slider-item2 {
   background-image: url(/src/img/Header/hero-image-02.jpg);
-  filter: brightness(20%);
 }
 .slider-wrapper .slider-item3 {
   background-image: url(/src/img/Header/hero-image-03.jpg);
-  filter: brightness(40%);
 }
 .slider-wrapper .slider-btn-disabled {
   width: 15px;
