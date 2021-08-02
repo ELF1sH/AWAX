@@ -11,6 +11,7 @@ html {
 
 body {
   font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
 }
 
 a, a:hover, a:focus, a:link, a:visited, a:active {
@@ -54,6 +55,39 @@ a, a:hover, a:focus, a:link, a:visited, a:active {
 }
 .top-navbar .container .icon-nav-bar-container {
   display: none;
+}
+.top-navbar .container .icon-nav-bar-container .fas {
+  cursor: pointer;
+}
+
+.side-menu-mobile {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100vh;
+  z-index: 1000;
+  background-color: #000;
+}
+.side-menu-mobile .mobile-nav-bar {
+  text-align: center;
+}
+.side-menu-mobile .mobile-nav-bar .nav-list {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 2rem;
+  list-style-type: none;
+}
+.side-menu-mobile .mobile-nav-bar .nav-list li {
+  display: block;
+  margin: 2rem 0;
+}
+.side-menu-mobile .mobile-nav-bar .nav-list li a {
+  color: #FFF;
+  transition: color 0.4s ease;
+}
+.side-menu-mobile .mobile-nav-bar .nav-list li a:hover {
+  color: #B88B58;
 }
 
 .slider-wrapper {
@@ -137,7 +171,7 @@ a, a:hover, a:focus, a:link, a:visited, a:active {
   border-radius: 50%;
   border: 2px solid #B88B58;
   margin: 0 5px 18px 5px;
-  transition: filter 0.2s linear;
+  transition: all 0.4s linear;
 }
 .slider-wrapper .slider-btn-disabled:hover {
   filter: opacity(70%);
@@ -148,10 +182,48 @@ a, a:hover, a:focus, a:link, a:visited, a:active {
   border-radius: 50%;
   margin: 0 5px 18px 5px;
   background-color: #B88B58;
-  transition: filter 0.2s linear;
+  transition: all 0.4s linear;
 }
 .slider-wrapper .slider-btn-active:hover {
   filter: opacity(70%);
+}
+
+section {
+  padding: 50px 0;
+}
+section .header-wrapper {
+  text-transform: uppercase;
+  text-align: center;
+}
+section .header-wrapper .section-header {
+  font-size: 30px;
+  margin-bottom: 15px;
+  color: #000;
+}
+section .header-wrapper .section-subtitle {
+  font-size: 14px;
+  margin-bottom: 15px;
+  color: #AEAEAE;
+}
+
+.about-us-section .section-content {
+  display: flex;
+}
+.about-us-section .section-content .text-wrapper button {
+  color: #FFF;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  background-color: #B88B58;
+  border: none;
+  padding: 12px 32px;
+  border-radius: 20px;
+  transition: background 0.5s ease;
+  cursor: pointer;
+}
+.about-us-section .section-content .text-wrapper button:hover {
+  background-color: #8E6B44;
 }
 
 /*# sourceMappingURL=style.css.map */

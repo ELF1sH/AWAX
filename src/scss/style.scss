@@ -14,6 +14,7 @@ html {
 }
 body {
     font-family: fonts.$Montserrat;
+    overflow-x: hidden;
 }
 a, a:hover, a:focus, a:link, a:visited, a:active {
     text-decoration: none;
@@ -54,6 +55,40 @@ a, a:hover, a:focus, a:link, a:visited, a:active {
         }
         .icon-nav-bar-container {
             display: none;
+            .fas {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.side-menu-mobile {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100vh;
+
+    z-index: 1000;
+    background-color: colors.$secondaryColor;
+    .mobile-nav-bar {
+        text-align: center;
+        .nav-list {
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 2rem;
+            list-style-type: none;
+            li {
+                display: block;
+                margin: 2rem 0;
+                a {
+                    color: colors.$headersFontColor;
+                    transition: color .4s ease;
+                    &:hover {
+                        color: colors.$mainColor;
+                    }
+                }
+            }
         }
     }
 }
@@ -121,7 +156,7 @@ a, a:hover, a:focus, a:link, a:visited, a:active {
         border-radius: 50%;
         border: 2px solid colors.$mainColor;
         margin: 0 5px 18px 5px;
-        transition: filter .2s linear;
+        transition: all .4s linear;
         &:hover {
             filter: opacity(70%);
         }
@@ -132,9 +167,38 @@ a, a:hover, a:focus, a:link, a:visited, a:active {
         border-radius: 50%;
         margin: 0 5px 18px 5px;
         background-color: colors.$mainColor;
-        transition: filter .2s linear;
+        transition: all .4s linear;
         &:hover {
             filter: opacity(70%);
+        }
+    }
+}
+
+section {
+    padding: 50px 0;
+    .header-wrapper {
+        text-transform: uppercase;
+        text-align: center;
+        .section-header {
+            font-size: 30px;
+            margin-bottom: 15px;
+            color: colors.$secondaryColor;
+        }
+        .section-subtitle {
+            font-size: 14px;
+            margin-bottom: 15px;
+            color: colors.$minorFontColor;
+        }
+    }
+}
+
+.about-us-section {
+    .section-content {
+        display: flex;
+        .text-wrapper {
+            button {
+                @include components.mainBtn();
+            }
         }
     }
 }

@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="css/anims.css">
 
     <script src="https://kit.fontawesome.com/38d1bb37ba.js" crossorigin="anonymous"></script>
 </head>
@@ -31,10 +32,35 @@
                 </ul>
             </nav>
             <div class="icon-nav-bar-container">
-                <i class="fas fa-bars"></i>
+                <i class="fas fa-bars" id="side-menu-btn-open"></i>
             </div>
         </div>
+
+        <div class="side-menu-mobile" id="side-menu-mobile">
+            <div class="container">
+                <div class="main-logo-container">
+                    <a href="#"><img src="img/NavBar/logo.png" alt="Main Logo"></a>
+                </div>
+                <div class="icon-nav-bar-container">
+                    <i class="fas fa-bars" id="side-menu-btn-close"></i>
+                </div>
+            </div>
+            <nav class="mobile-nav-bar">
+                <ul class="nav-list">
+                    <li><a href="">home</a></li>
+                    <li><a href="">about us</a></li>
+                    <li><a href="">services</a></li>
+                    <li><a href="">our projects</a></li>
+                    <li><a href="">our team</a></li>
+                    <li><a href="">happy clients</a></li>
+                    <li><a href="">price</a></li>
+                    <li><a href="">some facts</a></li>
+                    <li><a href="">contact us</a></li>
+                </ul>
+            </nav>
+        </div>
     </div>
+    
 
     <header>
         <div class="slider-wrapper" id="slider-wrapper">
@@ -69,6 +95,24 @@
         </div>
     </header>
 
+
+    <main>
+        <section class="about-us-section">
+            <div class="header-wrapper">
+                <h3 class="section-header">about us</h3>
+                <h5 class="section-subtitle">who we are</h5>
+            </div>
+            <div class="section-content">
+                <div class="text-wrapper">
+                    <p>Praesent metus urna, feugiat a placerat vel, elementum at leo. Quisque vel fermentum ipsum. Nulla at facilisis est, vel condimentum ligula. Mauris volutpat vitae risus sed pellentesque. Praesent fermentum neque ac tellus gravida, at varius sem accumsan. Nam porta erat id sapien consectetur. Fusce sed purus eros. Vivamus rhoncus, ipsum in tempus fermentum, orci leo facilisis purus. Nam porta erat id sapien consectetur. Fusce sed purus eros. Vivamus rhoncus, ipsum in tempus fermentum, orci leo facilisis purus.</p>
+                    <button>learn more</button>
+                </div>
+                <div class="video-wrapper">
+
+                </div>
+            </div>
+        </section>
+    </main>
     <script src="js/main.js" type="module"></script>
 </body>
 </html>
