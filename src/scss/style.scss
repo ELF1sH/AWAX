@@ -175,7 +175,7 @@ a, a:hover, a:focus, a:link, a:visited, a:active {
 }
 
 section {
-    padding: 50px 0;
+    padding: 50px 10%;
     .header-wrapper {
         text-transform: uppercase;
         text-align: center;
@@ -186,7 +186,7 @@ section {
         }
         .section-subtitle {
             font-size: 14px;
-            margin-bottom: 15px;
+            margin-bottom: 30px;
             color: colors.$minorFontColor;
         }
     }
@@ -196,8 +196,29 @@ section {
     .section-content {
         display: flex;
         .text-wrapper {
+            margin-right: 70px;
+            p {
+                line-height: 150%;
+                font-size: 15px;
+                color: colors.$mainFontColor;
+                margin-bottom: 30px;
+            }
             button {
                 @include components.mainBtn();
+            }
+        }
+        .video-wrapper {
+            @include mixins.box-shadow-centered();
+            .video-link {
+                display: inline;
+                .video-thumbnail {
+                    width: 100%;
+                    height: auto;
+                    transition: filter .5s ease;
+                    &:hover {
+                        filter: brightness(1.2);
+                    }
+                }
             }
         }
     }

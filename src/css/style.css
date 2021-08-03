@@ -189,7 +189,7 @@ a, a:hover, a:focus, a:link, a:visited, a:active {
 }
 
 section {
-  padding: 50px 0;
+  padding: 50px 10%;
 }
 section .header-wrapper {
   text-transform: uppercase;
@@ -202,12 +202,21 @@ section .header-wrapper .section-header {
 }
 section .header-wrapper .section-subtitle {
   font-size: 14px;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
   color: #AEAEAE;
 }
 
 .about-us-section .section-content {
   display: flex;
+}
+.about-us-section .section-content .text-wrapper {
+  margin-right: 70px;
+}
+.about-us-section .section-content .text-wrapper p {
+  line-height: 150%;
+  font-size: 15px;
+  color: #242424;
+  margin-bottom: 30px;
 }
 .about-us-section .section-content .text-wrapper button {
   color: #FFF;
@@ -224,6 +233,22 @@ section .header-wrapper .section-subtitle {
 }
 .about-us-section .section-content .text-wrapper button:hover {
   background-color: #8E6B44;
+}
+.about-us-section .section-content .video-wrapper {
+  -webkit-box-shadow: 0px 0px 8px 3px rgba(50, 50, 50, 0.46);
+  -moz-box-shadow: 0px 0px 8px 3px rgba(50, 50, 50, 0.46);
+  box-shadow: 0px 0px 8px 3px rgba(50, 50, 50, 0.46);
+}
+.about-us-section .section-content .video-wrapper .video-link {
+  display: inline;
+}
+.about-us-section .section-content .video-wrapper .video-link .video-thumbnail {
+  width: 100%;
+  height: auto;
+  transition: filter 0.5s ease;
+}
+.about-us-section .section-content .video-wrapper .video-link .video-thumbnail:hover {
+  filter: brightness(1.2);
 }
 
 /*# sourceMappingURL=style.css.map */
