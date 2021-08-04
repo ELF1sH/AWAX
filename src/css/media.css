@@ -7,6 +7,10 @@
     width: 100%;
     padding: 0 4rem;
   }
+
+  section .section-container {
+    width: 930px;
+  }
 }
 @media only screen and (max-width: 960px) {
   .top-navbar .container {
@@ -21,10 +25,28 @@
     justify-content: center;
     font-size: 3.2rem;
   }
+
+  .about-us-section .section-container {
+    width: 690px;
+  }
+  .about-us-section .section-container .section-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .about-us-section .section-container .section-content .text-wrapper {
+    text-align: center;
+    margin-bottom: 40px;
+    margin-right: 0;
+  }
 }
 @media only screen and (max-width: 750px) {
   html {
     font-size: 10px;
+  }
+
+  .about-us-section .section-container {
+    width: 480px;
   }
 }
 @media only screen and (max-width: 480px) {
@@ -34,6 +56,10 @@
 
   .top-navbar .container {
     padding: 10px 4rem;
+  }
+
+  .about-us-section .section-container {
+    width: 100%;
   }
 }
 
