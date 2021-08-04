@@ -248,4 +248,11 @@ section .section-container .header-wrapper .section-subtitle {
   filter: brightness(1.2);
 }
 
+.services-section {
+  background-color: #000;
+}
+.services-section .section-container .header-wrapper .section-header {
+  color: #FFF;
+}
+
 /*# sourceMappingURL=style.css.map */

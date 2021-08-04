@@ -224,3 +224,14 @@ section {
         }
     }
 }
+
+.services-section {
+    background-color: colors.$secondaryColor;
+    .section-container {
+        .header-wrapper {
+            .section-header {
+                color: colors.$headersFontColor;
+            }
+        }
+    }
+}
