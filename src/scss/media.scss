@@ -1,4 +1,5 @@
 @use "abstracts/mixins";
+@use "abstracts/colors";
 
 @media only screen and (max-width: 1200px) {
     html {
@@ -93,6 +94,33 @@
             width: 480px;
         }
     }
+    .tabs-wrapper {
+        .tabs-panel {
+            flex-wrap: wrap;
+            li {
+                width: 33%;
+                &:nth-child(-n+3) {
+                    border-bottom: 1px solid colors.$tabsPanelBorder;
+                }
+                &:nth-child(3) {
+                    border-right: 0px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 560px) {
+    .tabs-wrapper {
+        .tabs-items-wrapper {
+            flex-direction: column;
+            align-items: center;
+            .tabs-item {
+                width: 250px;
+                height: 160px;
+            }
+        }
+    }
 }
 
 @media only screen and (max-width: 480px) {
@@ -122,6 +150,17 @@
             }
             .service-item-#{$i}::before {
                 display: none;
+            }
+        }
+    }
+    .tabs-wrapper {
+        .tabs-panel {
+            li {
+                padding: 10px 6px;
+                text-align: center;
+                button {
+                    font-size: 13px;
+                }
             }
         }
     }

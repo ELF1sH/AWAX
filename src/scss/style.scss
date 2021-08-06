@@ -298,34 +298,29 @@ section {
     flex-direction: column;
     .tabs-panel {
         list-style-type: none;
-        margin-bottom: 25px;
+        display: flex;
+        background-color: colors.$tabsPanelColor;
+        border: 1px solid colors.$tabsPanelBorder;
+        padding: 0 15px;
+        border-radius: 25px;
+        margin-bottom: 30px;
         li {
-            display: inline;
-            &:first-child {
-                button {
-                    padding-left: 25px;
-                    border-radius: 25px 0 0 25px;
-                }
-            }
+            padding: 15px 20px;
+            border-right: 1px solid colors.$tabsPanelBorder;
+            transition: border .2s ease;
+            cursor: pointer;
             &:last-child {
-                button {
-                    padding-right: 25px;
-                    border-radius: 0 25px 25px 0;
-                }
+                border-right: 0px;
+            }
+            &:hover {
+                border-bottom: 6px solid colors.$mainColor;
+                padding-bottom: 9px;
             }
             button {
-                background-color: colors.$tabsPanelColor;
-                border: 1px solid #CFCFCF;
+                border: none;
                 text-transform: uppercase;
                 font-size: 15px;
-                font-family: fonts.$Montserrat;
-                padding: 15px 20px;
-                transition: .2s linear;
-                cursor: pointer;
-                &:hover {
-                    border-bottom: 5px solid colors.$mainColor;
-                    padding-bottom: 10px;
-                }
+                font-weight: 200;
             }
         }
     }
@@ -345,5 +340,30 @@ section {
             height: 160px;
             margin-bottom: 25px;
         }
+    }
+}
+.tabs-item {
+    .card-content {
+        height: 100%;
+        background-color: colors.$secondaryColor;
+        opacity: 0;
+        color: white;
+        padding: 20px;
+        transition: opacity .4s ease-in-out;
+        cursor: pointer;
+        @include mixins.flex-center-column();
+        .card-header {
+            text-transform: uppercase;
+            font-size: 17px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .card-descript {
+            text-align: center;
+            font-size: 14px;
+        }
+    }
+    &:hover .card-content {
+        opacity: 0.8;
     }
 }
