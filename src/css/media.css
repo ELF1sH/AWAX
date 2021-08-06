@@ -11,6 +11,43 @@
   section .section-container {
     width: 930px;
   }
+
+  .services-section .section-container {
+    width: 100%;
+  }
+
+  .services-wrapper .service-item-1::after {
+    display: none;
+  }
+  .services-wrapper .service-item-1::before {
+    display: none;
+  }
+  .services-wrapper .service-item-1 {
+    padding-bottom: 40px;
+  }
+  .services-wrapper .service-item-2::after {
+    display: none;
+  }
+  .services-wrapper .service-item-2 {
+    padding-bottom: 40px;
+  }
+  .services-wrapper .service-item-3::after {
+    display: none;
+  }
+  .services-wrapper .service-item-3::before {
+    display: none;
+  }
+  .services-wrapper .service-item-4::after {
+    display: none;
+  }
+  .services-wrapper .service-item {
+    width: 50%;
+  }
+
+  .tabs-wrapper .tabs-items-wrapper .tabs-item {
+    width: 200px;
+    height: 130px;
+  }
 }
 @media only screen and (max-width: 960px) {
   .top-navbar .container {
@@ -26,9 +63,10 @@
     font-size: 3.2rem;
   }
 
-  .about-us-section .section-container {
+  section .section-container {
     width: 690px;
   }
+
   .about-us-section .section-container .section-content {
     display: flex;
     flex-direction: column;
@@ -45,7 +83,7 @@
     font-size: 10px;
   }
 
-  .about-us-section .section-container {
+  section .section-container {
     width: 480px;
   }
 }
@@ -58,8 +96,39 @@
     padding: 10px 4rem;
   }
 
-  .about-us-section .section-container {
+  section .section-container {
     width: 100%;
+  }
+
+  .services-wrapper .service-item {
+    width: 100%;
+  }
+  .services-wrapper .service-item-1 {
+    padding-bottom: 0;
+    margin-bottom: 40px;
+  }
+  .services-wrapper .service-item-1::before {
+    display: none;
+  }
+  .services-wrapper .service-item-2 {
+    padding-bottom: 0;
+    margin-bottom: 40px;
+  }
+  .services-wrapper .service-item-2::before {
+    display: none;
+  }
+  .services-wrapper .service-item-3 {
+    padding-bottom: 0;
+    margin-bottom: 40px;
+  }
+  .services-wrapper .service-item-3::before {
+    display: none;
+  }
+  .services-wrapper .service-item-4 {
+    padding-bottom: 0;
+  }
+  .services-wrapper .service-item-4::before {
+    display: none;
   }
 }
 

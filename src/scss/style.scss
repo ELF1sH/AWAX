@@ -228,10 +228,122 @@ section {
 .services-section {
     background-color: colors.$secondaryColor;
     .section-container {
+        width: 1160px;
         .header-wrapper {
             .section-header {
                 color: colors.$headersFontColor;
             }
+        }
+    }
+}
+.services-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    @for $i from 1 through 4 {
+        .service-item-#{$i} {
+            .service-icon {
+                background-image: url(../svg/services-icons/services-0#{$i}.svg);
+            }
+        }
+    } 
+    .service-item {
+        width: 25%;
+        position: relative;
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            background-color: colors.$separatorColor;
+            width: 2px;
+            height: 100%;
+        }
+        .service-icon {
+            height: 90px;
+            background-repeat: no-repeat;
+            background-position: 50% 0%;
+            background-size: 60px;
+        }
+        .service-text { 
+            text-align: center;
+            .service-header {
+                color: colors.$headersFontColor;
+                font-size: 18px;
+                text-transform: uppercase;
+                margin-bottom: 10px;
+            }
+            .service-description {
+                color: colors.$secondaryFontColor;
+                font-size: 14px;
+                padding: 0 30px;
+            }
+        }
+    }
+    .service-item-4 {
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            background-color: colors.$separatorColor;
+            width: 2px;
+            height: 100%;
+            top: 0;
+            left: 100%;
+        }
+    }
+}
+
+.tabs-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .tabs-panel {
+        list-style-type: none;
+        margin-bottom: 25px;
+        li {
+            display: inline;
+            &:first-child {
+                button {
+                    padding-left: 25px;
+                    border-radius: 25px 0 0 25px;
+                }
+            }
+            &:last-child {
+                button {
+                    padding-right: 25px;
+                    border-radius: 0 25px 25px 0;
+                }
+            }
+            button {
+                background-color: colors.$tabsPanelColor;
+                border: 1px solid #CFCFCF;
+                text-transform: uppercase;
+                font-size: 15px;
+                font-family: fonts.$Montserrat;
+                padding: 15px 20px;
+                transition: .2s linear;
+                cursor: pointer;
+                &:hover {
+                    border-bottom: 5px solid colors.$mainColor;
+                    padding-bottom: 10px;
+                }
+            }
+        }
+    }
+    .tabs-items-wrapper {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        @for $i from 1 through 12 {
+            .tabs-item-#{$i} {
+                background-image: url(../img/Projects/projects-#{$i}.jpg);
+                @include mixins.bg-image-center();
+            }
+        }
+        .tabs-item {
+            width: 250px;
+            height: 160px;
+            margin-bottom: 25px;
         }
     }
 }
