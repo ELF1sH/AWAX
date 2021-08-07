@@ -21,3 +21,12 @@
         left: 100%;
     }
 }
+
+@keyframes disappearing {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
