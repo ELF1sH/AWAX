@@ -22,5 +22,8 @@ sideMenu.init()
 
 const tabsPanel = document.getElementById("tabs-panel")
 const itemsWrapper = document.getElementById("items-wrapper")
-const tf = new TabFilter(tabsPanel, itemsWrapper)
+const tf = new TabFilter({
+    tabsPanel: tabsPanel,
+    itemsWrapper: itemsWrapper
+})
 tf.init() 
