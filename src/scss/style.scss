@@ -380,3 +380,14 @@ section {
         opacity: 0.8;
     }
 }
+
+.team-section {
+    background-image: url(../img/Team/team-bg.jpg);
+    .section-container {
+        .header-wrapper {
+            .section-header {
+                color: colors.$headersFontColor;
+            }
+        }
+    }
+}

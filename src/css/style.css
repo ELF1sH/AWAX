@@ -484,4 +484,11 @@ section .section-container .header-wrapper .section-subtitle {
   opacity: 0.8;
 }
 
+.team-section {
+  background-image: url(../img/Team/team-bg.jpg);
+}
+.team-section .section-container .header-wrapper .section-header {
+  color: #FFF;
+}
+
 /*# sourceMappingURL=style.css.map */
