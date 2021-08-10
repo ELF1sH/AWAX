@@ -484,10 +484,10 @@ section .section-container .header-wrapper .section-subtitle {
   opacity: 0.8;
 }
 
-.team-section {
-  background-image: url(../img/Team/team-bg.jpg);
+.clients-section {
+  background-color: #000;
 }
-.team-section .section-container .header-wrapper .section-header {
+.clients-section .section-container .header-wrapper .section-header {
   color: #FFF;
 }
 
