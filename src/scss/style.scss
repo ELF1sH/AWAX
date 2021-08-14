@@ -150,27 +150,29 @@ a, a:hover, a:focus, a:link, a:visited, a:active {
     .slider-item3 {
         background-image: url(/src/img/Header/hero-image-03.jpg);
     }
-    .slider-btn-disabled {
-        width: 15px;
-        height: 15px;
-        border-radius: 50%;
-        border: 2px solid colors.$mainColor;
-        margin: 0 5px 18px 5px;
-        transition: all .4s linear;
-        &:hover {
-            filter: opacity(70%);
-        }
+}
+.slider-btn-disabled {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid colors.$mainColor;
+    margin: 0 5px 18px 5px;
+    transition: all .4s linear;
+    cursor: pointer;
+    &:hover {
+        filter: opacity(70%);
     }
-    .slider-btn-active {
-        width: 15px;
-        height: 15px;
-        border-radius: 50%;
-        margin: 0 5px 18px 5px;
-        background-color: colors.$mainColor;
-        transition: all .4s linear;
-        &:hover {
-            filter: opacity(70%);
-        }
+}
+.slider-btn-active {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin: 0 5px 18px 5px;
+    background-color: colors.$mainColor;
+    transition: all .4s linear;
+    cursor: pointer;
+    &:hover {
+        filter: opacity(70%);
     }
 }
 
@@ -383,10 +385,60 @@ section {
 
 .clients-section {
     background-color: colors.$secondaryColor;
+    background-image: url(../img/Clients/bg-clients.jpg);
+    @include mixins.bg-image-center();
     .section-container {
         .header-wrapper {
             .section-header {
                 color: colors.$headersFontColor;
+            }
+        }
+    }
+}
+.gallery-item {
+    .item-container {
+        color: colors.$headersFontColor;
+        width: 700px;
+        margin: 0 auto;
+        .photo-wrapper {
+            width: 154px;
+            margin: 0 auto;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-bottom: 20px;
+            img {
+                width: 100%;
+                display: block;
+                height: auto;
+            }
+        }
+        .header-wrapper {
+            margin-bottom: 20px;
+            .client-name {
+                text-transform: none;
+                font-size: 24px;
+                margin-bottom: 10px;
+            }
+            .client-description {
+                text-transform: none;
+                font-weight: 400;
+                font-size: 18px;
+                color: colors.$minorFontColor;
+            }
+        }
+        .client-quote {
+            color: colors.$secondaryFontColor;
+            text-align: center;
+            font-size: 17px;
+            margin-bottom: 20px;
+            line-height: 150%;
+            &::before {
+                font-family: "Font Awesome 5 Free";
+                font-weight: 900;
+                font-size: 27px;
+                content: "\f10d";
+                display: block;
+                margin-bottom: 10px;
             }
         }
     }

@@ -3,6 +3,7 @@
 import { slider } from "./slider.js"
 import { mobileSideMenu } from "./mobileSideMenu.js"
 import { TabFilter } from "./TabFilter.js"
+import { Gallery } from "./cardSlider.js"
 
 
 
@@ -27,3 +28,13 @@ const tf = new TabFilter({
     itemsWrapper: itemsWrapper
 })
 tf.init() 
+
+
+
+const galleryWrapper = document.getElementById("gallery-wrapper")
+const g = new Gallery({
+    galleryWrapper: galleryWrapper,
+    sliderBtnClassName: "slider-btn-disabled",
+    sliderBtnActiveClassName: "slider-btn-active"
+})
+g.init()
