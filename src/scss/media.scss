@@ -1,6 +1,14 @@
 @use "abstracts/mixins";
 @use "abstracts/colors";
 
+@media only screen and (min-width: 1575px) {
+    .brands-logos-list {
+        .brand-logo {
+            margin-bottom: 0;
+        }
+    }
+}
+
 @media only screen and (max-width: 1200px) {
     html {
         font-size: 13px;
@@ -49,6 +57,11 @@
             }
         }
     }
+    .subscriptions-wrapper {
+        .subscription-item {
+            width: 25%;
+        }
+    }
 }
 
 @media only screen and (max-width: 960px) {
@@ -83,6 +96,12 @@
             }
         }
     }
+    .subscriptions-wrapper {
+        .subscription-item {
+            width: 50%;
+            margin-bottom: 50px;
+        }
+    }
 }
 
 @media only screen and (max-width: 750px) {
@@ -106,6 +125,11 @@
                     border-right: 0px;
                 }
             }
+        }
+    }
+    .gallery-item {
+        .item-container {
+            width: 100%;
         }
     }
 }

@@ -72,7 +72,6 @@ export class Gallery {
             .--gallery-slider-item {
                 width: 100%;
                 height: 100%;
-                position: absolute;
             }
             .--gallery-points-wrapper {
                 position: absolute;

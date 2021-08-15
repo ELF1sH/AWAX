@@ -1,3 +1,8 @@
+@media only screen and (min-width: 1575px) {
+  .brands-logos-list .brand-logo {
+    margin-bottom: 0;
+  }
+}
 @media only screen and (max-width: 1200px) {
   html {
     font-size: 13px;
@@ -48,6 +53,10 @@
     width: 200px;
     height: 130px;
   }
+
+  .subscriptions-wrapper .subscription-item {
+    width: 25%;
+  }
 }
 @media only screen and (max-width: 960px) {
   .top-navbar .container {
@@ -77,6 +86,11 @@
     margin-bottom: 40px;
     margin-right: 0;
   }
+
+  .subscriptions-wrapper .subscription-item {
+    width: 50%;
+    margin-bottom: 50px;
+  }
 }
 @media only screen and (max-width: 750px) {
   html {
@@ -98,6 +112,10 @@
   }
   .tabs-wrapper .tabs-panel li:nth-child(3) {
     border-right: 0px;
+  }
+
+  .gallery-item .item-container {
+    width: 100%;
   }
 }
 @media only screen and (max-width: 560px) {

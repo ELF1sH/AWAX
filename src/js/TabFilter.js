@@ -14,8 +14,6 @@ export class TabFilter {
         this.createStyleSheet()
         this.setListeners()
 
-        this.itemsWrapper.style.height = this.itemsWrapper.offsetHeight + "px"
-
         this.btns[0].classList.add("btn-underline")
     }
 

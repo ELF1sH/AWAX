@@ -547,4 +547,100 @@ section .section-container .header-wrapper .section-subtitle {
   margin-bottom: 10px;
 }
 
+.brands-logos-section .section-container {
+  width: 100%;
+}
+
+.brands-logos-list {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.brands-logos-list .brand-logo {
+  margin: 0 30px;
+  margin-bottom: 45px;
+  transition: filter 0.2s linear;
+}
+.brands-logos-list .brand-logo:hover {
+  filter: brightness(1.15);
+}
+
+.price-section {
+  background-color: #F7F7F7;
+}
+
+.subscriptions-wrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.subscriptions-wrapper .subscription-item {
+  width: 250px;
+  text-align: center;
+}
+.subscriptions-wrapper .subscription-item .subscr-name {
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 17px;
+  margin-bottom: 20px;
+}
+.subscriptions-wrapper .subscription-item .price {
+  font-weight: bold;
+  font-size: 32px;
+  color: #242424;
+}
+.subscriptions-wrapper .subscription-item .price::before {
+  content: "$";
+}
+.subscriptions-wrapper .subscription-item .price::after {
+  content: "/month";
+  display: block;
+  font-size: 13px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  color: #6F6F74;
+}
+.subscriptions-wrapper .subscription-item .feature {
+  color: #626262;
+  font-size: 12px;
+  display: block;
+  position: relative;
+  margin-bottom: 21px;
+}
+.subscriptions-wrapper .subscription-item .feature::after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 1px;
+  margin: 0 auto;
+  background-color: #626262;
+  position: absolute;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.subscriptions-wrapper .subscription-item .feature:last-child::after {
+  display: none;
+}
+.subscriptions-wrapper .subscription-item .subscr-choose-btn {
+  color: #FFF;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  background-color: #B88B58;
+  border: none;
+  padding: 12px 32px;
+  border-radius: 20px;
+  transition: background 0.5s ease;
+  cursor: pointer;
+  background-color: #242424;
+  margin-top: 15px;
+}
+.subscriptions-wrapper .subscription-item .subscr-choose-btn:hover {
+  background-color: #8E6B44;
+}
+
 /*# sourceMappingURL=style.css.map */

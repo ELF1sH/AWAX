@@ -443,3 +443,88 @@ section {
         }
     }
 }
+
+.brands-logos-section {
+    .section-container {
+        width: 100%;
+    }
+}
+.brands-logos-list {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    .brand-logo {
+        margin: 0 30px;
+        margin-bottom: 45px;
+        transition: filter .2s linear;
+        &:hover {
+            filter: brightness(1.15);
+        }
+    }
+}
+
+.price-section {
+    background-color: colors.$priceSectionBg;
+}
+.subscriptions-wrapper {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    .subscription-item {
+        width: 250px;
+        text-align: center;
+        .subscr-name {
+            font-weight: 400;
+            text-transform: uppercase;
+            font-size: 17px;
+            margin-bottom: 20px;
+        }
+        .price {
+            font-weight: bold;
+            font-size: 32px;
+            color: colors.$mainFontColor;
+            &::before {
+                content: "$";
+            }
+            &::after {
+                content: "/month";
+                display: block;
+                font-size: 13px;
+                font-weight: 400;
+                text-transform: uppercase;
+                margin-bottom: 20px;
+                color: colors.$secondaryFontColor;
+            }
+        }
+        .feature {
+            color: colors.$thirdFontColor;
+            font-size: 12px;
+            display: block;
+            position: relative;
+            margin-bottom: 21px;
+            &::after {
+                content: "";
+                display: block;
+                width: 10px;
+                height: 1px;
+                margin: 0 auto;
+                background-color: colors.$thirdFontColor;
+                position: absolute;
+                top: 24px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+        .feature:last-child {
+            &::after {
+                display: none;
+            }
+        }
+        .subscr-choose-btn {
+            @include components.mainBtn();
+            background-color: colors.$mainFontColor;
+            margin-top: 15px;
+        }
+    }
+}
