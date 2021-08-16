@@ -20,3 +20,40 @@
         background-color: colors.$mainColorHover;
     }
 }
+
+@mixin mainInput() {
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid colors.$inputBorder;
+    padding-bottom: 20px;
+
+    font-size: 13px;
+    font-family: fonts.$Montserrat;
+
+    transition: .4s;
+    &:focus {
+        outline: none;
+        color: colors.$mainColor;
+        border-bottom: 2px solid colors.$mainColor;
+    }
+}
+
+@mixin mainTextarea() {
+    width: 100%;
+    min-height: 100px;
+
+    font-size: 13px;
+    font-family: fonts.$Montserrat;
+
+    outline: none;
+    resize: none;
+    border: none;
+    border-bottom: 2px solid colors.$inputBorder;
+
+    transition: .4s;
+    &:focus {
+        outline: none;
+        color: colors.$mainColor;
+        border-bottom: 2px solid colors.$mainColor;
+    }
+}

@@ -17,7 +17,7 @@
     width: 930px;
   }
 
-  .services-section .section-container {
+  .services-section .section-container, .facts-section .section-container {
     width: 100%;
   }
 
@@ -91,6 +91,19 @@
     width: 50%;
     margin-bottom: 50px;
   }
+
+  .premium-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .premium-wrapper .image-container {
+    margin-bottom: 35px;
+  }
+
+  .facts-container .fact-item {
+    width: 50%;
+    padding: 0 10%;
+  }
 }
 @media only screen and (max-width: 750px) {
   html {
@@ -127,6 +140,15 @@
     width: 250px;
     height: 160px;
   }
+
+  .facts-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .facts-container .fact-item {
+    margin-bottom: 30px;
+    padding: 0;
+  }
 }
 @media only screen and (max-width: 480px) {
   html {
@@ -139,6 +161,10 @@
 
   section .section-container {
     width: 100%;
+  }
+
+  .about-us-section .section-container .section-content {
+    padding: 0 20px;
   }
 
   .services-wrapper .service-item {
@@ -178,6 +204,10 @@
   }
   .tabs-wrapper .tabs-panel li button {
     font-size: 13px;
+  }
+
+  .premium-wrapper .description-container {
+    padding: 0 20px;
   }
 }
 
