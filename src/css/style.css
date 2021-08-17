@@ -466,7 +466,7 @@ section .section-container .header-wrapper .section-subtitle {
   height: 100%;
   background-color: #000;
   opacity: 0;
-  color: #001EFF;
+  color: #AEAEAE;
   padding: 20px;
   transition: opacity 0.4s ease-in-out;
   cursor: pointer;
@@ -733,6 +733,25 @@ section .section-container .header-wrapper .section-subtitle {
   line-height: 20px;
 }
 
+.share-section .section-container .header-wrapper .section-subtitle {
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.share-section .section-container .header-wrapper .section-subtitle::before {
+  content: "";
+  display: inline-block;
+  width: 23px;
+  height: 25px;
+  background-image: url(../svg/icons/share.svg);
+  margin-right: 20px;
+}
+
+.social-medias-links-container {
+  list-style-type: none;
+}
+
 .form-wrapper {
   width: 500px;
   margin: 0 auto;
@@ -747,6 +766,7 @@ section .section-container .header-wrapper .section-subtitle {
   font-size: 13px;
   font-family: "Montserrat", sans-serif;
   transition: 0.4s;
+  margin-bottom: 40px;
 }
 .form-wrapper input:focus {
   outline: none;
@@ -763,6 +783,7 @@ section .section-container .header-wrapper .section-subtitle {
   border: none;
   border-bottom: 2px solid #A4A4A4;
   transition: 0.4s;
+  margin-bottom: 40px;
 }
 .form-wrapper textarea:focus {
   outline: none;
@@ -772,18 +793,15 @@ section .section-container .header-wrapper .section-subtitle {
 .form-wrapper .name-input-wrapper {
   width: 50%;
   padding-right: 20px;
-  margin-bottom: 40px;
 }
 .form-wrapper .email-input-wrapper {
   width: 50%;
 }
 .form-wrapper .subject-input-wrapper {
   width: 100%;
-  margin-bottom: 40px;
 }
 .form-wrapper .message-input-wrapper {
   width: 100%;
-  margin-bottom: 40px;
 }
 .form-wrapper .btn-wrapper {
   text-align: center;
@@ -804,15 +822,6 @@ section .section-container .header-wrapper .section-subtitle {
 }
 .form-wrapper .btn-wrapper .form-submit:hover {
   background-color: #8E6B44;
-}
-
-.map-section iframe {
-  width: 100%;
-}
-.map-section iframe .div {
-  width: 400px;
-  height: 400px;
-  background-color: grey;
 }
 
 /*# sourceMappingURL=style.css.map */

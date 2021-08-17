@@ -149,6 +149,13 @@
     margin-bottom: 30px;
     padding: 0;
   }
+
+  .form-wrapper .name-input-wrapper {
+    width: 100%;
+  }
+  .form-wrapper .email-input-wrapper {
+    width: 100%;
+  }
 }
 @media only screen and (max-width: 480px) {
   html {
@@ -207,6 +214,10 @@
   }
 
   .premium-wrapper .description-container {
+    padding: 0 20px;
+  }
+
+  .form-wrapper {
     padding: 0 20px;
   }
 }
