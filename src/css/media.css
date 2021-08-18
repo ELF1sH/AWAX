@@ -130,6 +130,18 @@
   .gallery-item .item-container {
     width: 100%;
   }
+
+  .share-section .section-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .share-section .section-container .header-wrapper {
+    margin-bottom: 20px;
+  }
+  .share-section .section-container .header-wrapper .section-subtitle {
+    margin-right: 0;
+  }
 }
 @media only screen and (max-width: 560px) {
   .tabs-wrapper .tabs-items-wrapper {

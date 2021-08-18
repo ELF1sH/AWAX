@@ -733,11 +733,16 @@ section .section-container .header-wrapper .section-subtitle {
   line-height: 20px;
 }
 
+.share-section .section-container {
+  display: flex;
+  justify-content: center;
+}
 .share-section .section-container .header-wrapper .section-subtitle {
   margin-bottom: 0;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-right: 80px;
 }
 .share-section .section-container .header-wrapper .section-subtitle::before {
   content: "";
@@ -750,6 +755,41 @@ section .section-container .header-wrapper .section-subtitle {
 
 .social-medias-links-container {
   list-style-type: none;
+  display: flex;
+}
+.social-medias-links-container .social-media-wrapper {
+  margin-right: 35px;
+}
+.social-medias-links-container .social-media-wrapper:last-child {
+  margin-right: 0;
+}
+.social-medias-links-container .social-media-wrapper .social-media-link {
+  display: flex;
+  align-items: center;
+}
+.social-medias-links-container .social-media-wrapper .social-media-link .social-media-icon {
+  font-size: 30px;
+  margin-right: 5px;
+}
+.social-medias-links-container .social-media-wrapper .social-media-link .fa-twitter-square {
+  color: #34C5F0;
+}
+.social-medias-links-container .social-media-wrapper .social-media-link .fa-linkedin {
+  color: #127CB3;
+}
+.social-medias-links-container .social-media-wrapper .social-media-link .fa-facebook-square {
+  color: #336297;
+}
+.social-medias-links-container .social-media-wrapper .social-media-link .fa-instagram-square {
+  color: #DD2A7B;
+}
+.social-medias-links-container .social-media-wrapper .social-media-link .fa-pinterest {
+  color: #B71C29;
+}
+.social-medias-links-container .social-media-wrapper .social-media-link .share-number {
+  color: #AEAEAE;
+  font-size: 12px;
+  font-weight: bold;
 }
 
 .form-wrapper {
