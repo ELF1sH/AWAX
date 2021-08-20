@@ -26,7 +26,7 @@ input:focus {
 .top-navbar {
   color: #FFF;
   background-color: #000;
-  position: absolute;
+  position: fixed;
   width: 100%;
   z-index: 4;
 }

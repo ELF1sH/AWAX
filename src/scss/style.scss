@@ -28,7 +28,7 @@ input {
 .top-navbar {
     color: colors.$headersFontColor;
     background-color: colors.$secondaryColor;
-    position: absolute;
+    position: fixed;
     width: 100%;
     z-index: 4;
     .container {

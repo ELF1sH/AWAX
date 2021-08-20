@@ -57,7 +57,6 @@ export class slider {
                 display: flex;
             }
             .--point {
-                margin: 0 3px;
                 cursor: pointer;
             }   
         `
