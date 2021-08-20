@@ -4,6 +4,7 @@ import { slider } from "./slider.js"
 import { mobileSideMenu } from "./mobileSideMenu.js"
 import { TabFilter } from "./TabFilter.js"
 import { Gallery } from "./cardSlider.js"
+import { NavBar } from "./NavBarHandle.js"
 
 
 
@@ -38,3 +39,11 @@ const g = new Gallery({
     sliderBtnActiveClassName: "slider-btn-active"
 })
 g.init()
+
+
+
+const navLinksWrapper = document.getElementById("nav-links-wrapper")
+const nb = new NavBar({
+    navLinksWrapper: navLinksWrapper
+})
+nb.init()

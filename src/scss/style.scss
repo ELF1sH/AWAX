@@ -51,9 +51,9 @@ input {
                 a {
                     color: colors.$headersFontColor;
                     padding: calc(2.2rem - #{d.$navBarLinkUnderline}) 8px;
+                    transition: .3s;
                     &:hover {
                         border-bottom: d.$navBarLinkUnderline solid colors.$mainColor;
-                        transition: .3s;
                     }
                 }
             }
@@ -65,6 +65,11 @@ input {
             }
         }
     }
+}
+.nav-bar-link__active {
+    
+    border-bottom: d.$navBarLinkUnderline solid colors.$mainColor;
+
 }
 
 .side-menu-mobile {

@@ -53,16 +53,20 @@ input:focus {
 .top-navbar .container .nav-list li a {
   color: #FFF;
   padding: calc(2.2rem - 7px) 8px;
+  transition: 0.3s;
 }
 .top-navbar .container .nav-list li a:hover {
   border-bottom: 7px solid #B88B58;
-  transition: 0.3s;
 }
 .top-navbar .container .icon-nav-bar-container {
   display: none;
 }
 .top-navbar .container .icon-nav-bar-container .fas {
   cursor: pointer;
+}
+
+.nav-bar-link__active {
+  border-bottom: 7px solid #B88B58;
 }
 
 .side-menu-mobile {
