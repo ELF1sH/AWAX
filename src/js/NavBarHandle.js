@@ -12,7 +12,34 @@ export class NavBar {
         }
         this.linksNumber = this.navLinks.length
 
-        
+        this.topNavbar = document.getElementById("top-navbar")
+        this.anchorsElems = []
+
+        this.setListeners()
+    }
+
+    setListeners() {
+        const anchorsNames = []
+        for (let i = 0; i < this.linksNumber; i++) {
+            anchorsNames[i] = this.navLinks[i].getAttribute("data-anchor")
+            this.anchorsElems[i] = document.getElementById(anchorsNames[i])
+        }
+        for (let i = 0; i < this.linksNumber; i++) {
+            this.navLinks[i].addEventListener("click", () => {
+                this.scrollToElement(this.anchorsElems[i])
+            })
+        }
+    }
+    scrollToElement(elem) {
+        const navbarHeight = this.topNavbar.offsetHeight
+        const elemPosition = elem.offsetTop
+
+        const adjustedPosition = elemPosition - navbarHeight;
+    
+        window.scrollTo({
+            top: adjustedPosition,
+            behavior: "smooth"
+        });
     }
 
     setActive(i) {

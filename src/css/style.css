@@ -17,6 +17,7 @@ body {
 
 a, a:hover, a:focus, a:link, a:visited, a:active {
   text-decoration: none;
+  cursor: pointer;
 }
 
 input:focus {
