@@ -16,6 +16,7 @@ export class NavBar {
         this.anchorsElems = []
 
         this.setListeners()
+        this.linkUnderliner()
     }
 
     setListeners() {
@@ -30,16 +31,38 @@ export class NavBar {
             })
         }
     }
+
     scrollToElement(elem) {
+        const adjustedPosition = this.getAdjustedPosition(elem)
+    
+        window.scrollTo({
+            top: adjustedPosition + 1, // "+1" for corrert working of linkUnderliner func
+            behavior: "smooth"
+        });
+    }
+
+    getAdjustedPosition(elem) {
         const navbarHeight = this.topNavbar.offsetHeight
         const elemPosition = elem.offsetTop
 
-        const adjustedPosition = elemPosition - navbarHeight;
-    
-        window.scrollTo({
-            top: adjustedPosition,
-            behavior: "smooth"
-        });
+        return elemPosition - navbarHeight
+    }
+
+    linkUnderliner() {
+        const navbarHeight = this.topNavbar.offsetHeight
+        
+        window.addEventListener("scroll", () => {
+            for (let i = 0; i < this.anchorsElems.length - 1; i++) {
+                const curPos = this.anchorsElems[i].getBoundingClientRect().top - navbarHeight
+                const nextPos = this.anchorsElems[i + 1].getBoundingClientRect().top - navbarHeight
+                if (curPos < 0 && nextPos >= 0) {
+                    this.setActive(i)
+                }
+                else if (i === this.anchorsElems.length - 2 && nextPos < 0) {
+                    this.setActive(i + 1)   // considering a case of the last anchor
+                }
+            }
+        })
     }
 
     setActive(i) {
