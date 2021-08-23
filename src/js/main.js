@@ -5,6 +5,7 @@ import { mobileSideMenu } from "./mobileSideMenu.js"
 import { TabFilter } from "./TabFilter.js"
 import { Gallery } from "./cardSlider.js"
 import { NavBar } from "./NavBarHandle.js"
+import { ScrollAnim } from "./scrollAnim.js"
 
 
 
@@ -47,3 +48,33 @@ const nb = new NavBar({
     navLinksWrapper: navLinksWrapper
 })
 nb.init()
+
+
+
+const sa = new ScrollAnim([
+    {
+        element: document.getElementById("about-us-text-wrapper"), 
+        anim: "leftToRight"
+    },
+    {
+        element: document.getElementById("about-us-video-wrapper"), 
+        anim: "rightToLeft"
+    },
+    {
+        element: document.getElementById("service-item-1"),
+        anim: "turnOver"
+    },
+    {
+        element: document.getElementById("service-item-2"),
+        anim: "turnOver"
+    },
+    {
+        element: document.getElementById("service-item-3"),
+        anim: "turnOver"
+    },
+    {
+        element: document.getElementById("service-item-4"),
+        anim: "turnOver"
+    }
+])
+sa.init()
