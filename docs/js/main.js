@@ -5,7 +5,7 @@ import { mobileSideMenu } from "./mobileSideMenu.js"
 import { TabFilter } from "./TabFilter.js"
 import { Gallery } from "./cardSlider.js"
 import { NavBar } from "./NavBarHandle.js"
-import { ScrollAnim } from "./scrollAnim.js"
+import { ScrollAnim } from "./ScrollAnim.js"
 
 
 
