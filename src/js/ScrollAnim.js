@@ -43,9 +43,12 @@ export class ScrollAnim {
     setElemStatus() {
         this.targetsCoord = []
         this.elemArr.forEach((item, index) => {
-            const offsetTop = item.element.offsetTop
-            const offsetHeight = item.element.offsetHeight
-            const target = offsetTop + offsetHeight / 2 - this.windowHeight
+            // const offsetTop = item.element.offsetTop
+            // const offsetHeight = item.element.offsetHeight
+            // const target = offsetTop + offsetHeight - this.windowHeight
+
+            const rect = item.element.getBoundingClientRect();
+            const target = rect.top + window.scrollY - this.windowHeight * 0.9
 
             // targetsCoord is a particular scroll coordinates where animations mush be played
             this.targetsCoord[index] = target
@@ -58,7 +61,7 @@ export class ScrollAnim {
 
             this.elemArr.forEach((item, index) => {
                 if (curScroll >= this.targetsCoord[index]) {
-
+                    console.log(item.element)
                     const delay = typeof this.elemArr[index].delay === "undefined" ? 400 : 400 + this.elemArr[index].delay
 
                     switch (item.anim) {

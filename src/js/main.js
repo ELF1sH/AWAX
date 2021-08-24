@@ -62,19 +62,104 @@ const sa = new ScrollAnim([
     },
     {
         element: document.getElementById("service-item-1"),
-        anim: "turnOver"
+        anim: "scaleIncreasing"
     },
     {
         element: document.getElementById("service-item-2"),
-        anim: "turnOver"
+        anim: "scaleIncreasing"
     },
     {
         element: document.getElementById("service-item-3"),
-        anim: "turnOver"
+        anim: "scaleIncreasing"
     },
     {
         element: document.getElementById("service-item-4"),
+        anim: "scaleIncreasing"
+    },
+    {
+        element: document.getElementById("prj-item-1"),
+        anim: "bottomToTop"
+    },
+    {
+        element: document.getElementById("prj-item-2"),
+        anim: "bottomToTop",
+        delay: 300
+    },
+    {
+        element: document.getElementById("prj-item-3"),
+        anim: "bottomToTop",
+        delay: 600
+    },
+    {
+        element: document.getElementById("prj-item-4"),
+        anim: "bottomToTop",
+        delay: 900
+    },
+    {
+        element: document.getElementById("prj-item-5"),
+        anim: "bottomToTop"
+    },
+    {
+        element: document.getElementById("prj-item-6"),
+        anim: "bottomToTop",
+        delay: 300
+    },
+    {
+        element: document.getElementById("prj-item-7"),
+        anim: "bottomToTop",
+        delay: 600
+    },
+    {
+        element: document.getElementById("prj-item-8"),
+        anim: "bottomToTop",
+        delay: 900
+    },
+    {
+        element: document.getElementById("prj-item-9"),
+        anim: "bottomToTop"
+    },
+    {
+        element: document.getElementById("prj-item-10"),
+        anim: "bottomToTop",
+        delay: 300
+    },
+    {
+        element: document.getElementById("prj-item-11"),
+        anim: "bottomToTop",
+        delay: 600
+    },
+    {
+        element: document.getElementById("prj-item-12"),
+        anim: "bottomToTop",
+        delay: 900
+    },
+    {
+        element: document.getElementById("gallery-item-1"),
+        anim: "scaleIncreasing"
+    },
+    {
+        element: document.getElementById("subscr-item-1"),
         anim: "turnOver"
+    },
+    {
+        element: document.getElementById("subscr-item-2"),
+        anim: "turnOver"
+    },
+    {
+        element: document.getElementById("subscr-item-3"),
+        anim: "turnOver"
+    },
+    {
+        element: document.getElementById("subscr-item-4"),
+        anim: "turnOver"
+    },
+    {
+        element: document.getElementById("prem-img"), 
+        anim: "leftToRight"
+    },
+    {
+        element: document.getElementById("prem-text"), 
+        anim: "rightToLeft"
     }
 ])
 sa.init()
