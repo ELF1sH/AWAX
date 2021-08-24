@@ -3,14 +3,12 @@
 export class ScrollAnim {
     constructor(options) {
         this.elemArr = options
-        console.log(this.elemArr)
     }
 
     init() {
         this.windowHeight = document.documentElement.clientHeight
 
         this.setDefaultStyles()
-        this.setElemStatus()
         this.scrollHandle()
     }
 
@@ -40,28 +38,15 @@ export class ScrollAnim {
         })
     }
 
-    setElemStatus() {
-        this.targetsCoord = []
-        this.elemArr.forEach((item, index) => {
-            // const offsetTop = item.element.offsetTop
-            // const offsetHeight = item.element.offsetHeight
-            // const target = offsetTop + offsetHeight - this.windowHeight
-
-            const rect = item.element.getBoundingClientRect();
-            const target = rect.top + window.scrollY - this.windowHeight * 0.9
-
-            // targetsCoord is a particular scroll coordinates where animations mush be played
-            this.targetsCoord[index] = target
-        })
-    }
-
     scrollHandle() {
         window.addEventListener("scroll", () => {
             const curScroll = window.scrollY
 
             this.elemArr.forEach((item, index) => {
-                if (curScroll >= this.targetsCoord[index]) {
-                    console.log(item.element)
+
+                const rect = item.element.getBoundingClientRect()
+                if (curScroll >= rect.top + pageYOffset - this.windowHeight) {
+
                     const delay = typeof this.elemArr[index].delay === "undefined" ? 400 : 400 + this.elemArr[index].delay
 
                     switch (item.anim) {
@@ -78,6 +63,8 @@ export class ScrollAnim {
                         case "bottomToTop":
                             setTimeout(() => {
                                 item.element.style.animation = `${item.anim} .6s ease-out forwards`
+                                item.element.style.transform = ""
+                                item.element.style.opacity = ""
                             }, delay)
                             break
                         case "turnOver":
@@ -105,7 +92,6 @@ export class ScrollAnim {
                     }
                     
                     // removing element from arrays if animation has been played
-                    this.targetsCoord.splice(index, 1)
                     this.elemArr.splice(index, 1)
                 }
             })

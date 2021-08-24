@@ -517,22 +517,22 @@
                 <div class="section-content">
                     <div class="facts-container">
                         <div class="fact-item">
-                            <span class="main-digit">1000</span>
+                            <span class="main-digit" id="digit-1">1000</span>
                             <h6 class="fact-header">desing projects released</h6>
                             <p class="fact-descript">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
                         </div>
                         <div class="fact-item">
-                            <span class="main-digit">900</span>
+                            <span class="main-digit" id="digit-2">900</span>
                             <h6 class="fact-header">Photos</h6>
                             <p class="fact-descript">Lorem ipsum dolor sit.</p>
                         </div>
                         <div class="fact-item">
-                            <span class="main-digit">500</span>
+                            <span class="main-digit" id="digit-3">500</span>
                             <h6 class="fact-header">marketing ideas</h6>
                             <p class="fact-descript">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
                         </div>
                         <div class="fact-item">
-                            <span class="main-digit">100</span>
+                            <span class="main-digit" id="digit-4">100</span>
                             <h6 class="fact-header">exhibitions</h6>
                             <p class="fact-descript">Lorem ipsum dolor sit amet.</p>
                         </div>
@@ -543,10 +543,10 @@
 
         <section class="share-section">
             <div class="section-container">
-                <div class="header-wrapper">
+                <div class="header-wrapper" id="share-header">
                     <h5 class="section-subtitle share-header">tell about us:</h5>
                 </div>
-                <div class="section-content">
+                <div class="section-content" id="share-links">
                     <ul class="social-medias-links-container">
                         <li class="social-media-wrapper">
                             <a href="" class="social-media-link">
@@ -589,7 +589,7 @@
                     <h3 class="section-header">contact us</h3>
                     <h5 class="section-subtitle">our agency located in melbourne, australia</h5>
                 </div>
-                <div class="section-content">
+                <div class="section-content" id="contact-us">
                     <form action="" class="form-wrapper">
                         <div class="name-input-wrapper">
                             <input type="text" placeholder="NAME">
@@ -614,7 +614,7 @@
         <section class="map-section">
             <div class="container">
                 <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d328873.41059105407!2d144.90943049610598!3d-37.97737348707784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sru!4v1629122049107!5m2!1sen!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                <div class="agency-info">
+                <div class="agency-info" id="agency-info">
                     <ul class="agency-info-list">
                         <li class="agency-info-text">
                             PO Box 16122 Collins Street West Victoria 8007 Australia 
@@ -633,7 +633,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="go-up-btn-wrapper">
+                <div class="go-up-btn-wrapper" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
                     <i class="fas fa-angle-up"></i>
                 </div>
             </div>

@@ -17,6 +17,8 @@ export class NavBar {
 
         this.setListeners()
         this.linkUnderliner()
+
+        this.setActive(0)
     }
 
     setListeners() {

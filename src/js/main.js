@@ -160,6 +160,38 @@ const sa = new ScrollAnim([
     {
         element: document.getElementById("prem-text"), 
         anim: "rightToLeft"
+    },
+    {
+        element: document.getElementById("digit-1"),
+        anim: "counter"
+    },
+    {
+        element: document.getElementById("digit-2"),
+        anim: "counter"
+    },
+    {
+        element: document.getElementById("digit-3"),
+        anim: "counter"
+    },
+    {
+        element: document.getElementById("digit-4"),
+        anim: "counter"
+    },
+    {
+        element: document.getElementById("share-header"),
+        anim: "leftToRight"
+    },
+    {
+        element: document.getElementById("share-links"),
+        anim: "rightToLeft"
+    },
+    {
+        element: document.getElementById("contact-us"),
+        anim: "scaleIncreasing"
+    },
+    {
+        element: document.getElementById("agency-info"),
+        anim: "leftToRight"
     }
 ])
 sa.init()
