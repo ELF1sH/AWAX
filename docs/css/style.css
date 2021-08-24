@@ -187,13 +187,13 @@ input:focus {
   background-color: #8E6B44;
 }
 .slider-wrapper .slider-item1 {
-  background-image: url(/docs/img/Header/hero-image-01.jpg);
+  background-image: url(../img/Header/hero-image-01.jpg);
 }
 .slider-wrapper .slider-item2 {
-  background-image: url(/docs/img/Header/hero-image-02.jpg);
+  background-image: url(../img/Header/hero-image-02.jpg);
 }
 .slider-wrapper .slider-item3 {
-  background-image: url(/docs/img/Header/hero-image-03.jpg);
+  background-image: url(../img/Header/hero-image-03.jpg);
 }
 
 .slider-btn-disabled {
